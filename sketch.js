@@ -69,14 +69,23 @@ function setup() {
 	y: 0,
 	vx: 0,
 	vy: 0,
+	ax: 0,
+	ay: 0,
 	diameter: 10,
 	
 	draw: function() {
 	    fill(255);
 	    ellipse(this.x + width/2, this.y + height/2, this.diameter, this.diameter);
+
 	    stroke(0,0,200);
 	    line(width/2, height/2, width/2+this.vx, height/2+this.vy);
 	    text("Vel", width/2+this.vx, height/2+this.vy);
+
+	    stroke(150,0,0);
+	    line(width/2, height/2, width/2+this.ax, height/2+this.ay);
+	    text("Accel", width/2+this.ax, height/2+this.ay);
+
+
 	},
 
 	move: function(ax, ay) {
@@ -84,6 +93,8 @@ function setup() {
 	    this.y = this.y + this.vy*Step;
 	    this.vx = this.vx + ax*Step;
 	    this.vy = this.vy + ay*Step;
+	    this.ax = ax;
+	    this.ay = ay;
 	}
     };
 }
