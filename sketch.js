@@ -2,7 +2,7 @@ var ship;
 var Step = 0.01;
 var Score = 50;
 var Balls = [];
-var Active = false;
+var Active = true;
 
 var Ball = {
     x : 0,
