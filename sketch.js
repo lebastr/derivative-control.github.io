@@ -106,10 +106,18 @@ function draw() {
 	checkCollision();
 	ship.move(touchX - width/2, touchY - height/2);
     } else {
+	Balls.forEach(function(b) {b.draw();});
+
 	fill(200,0,0);
 	ellipse(width/2, height/2, 5, 5);
 	fill(200);
 	text("To start game click to the center of the crossline", width/2, height/2);
+	
+	
+	fill(150);
+	text("Score: " + Score, 10,20);
+
+
 	if (mouseIsPressed){
 	    Active = true;
 	}
