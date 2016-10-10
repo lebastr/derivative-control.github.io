@@ -9,7 +9,7 @@ var Ball = {
     y : 0,
     score: 10,
     diameter: 10,
-    active: true,
+    active: false,
     
     draw: function draw(){
 	if (this.active){
