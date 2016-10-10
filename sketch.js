@@ -117,8 +117,7 @@ function draw() {
 	fill(150);
 	text("Score: " + Score, 10,20);
 
-
-	if (mouseIsPressed){
+	if (mouseIsPressed || touchIsDown) {
 	    Active = true;
 	}
     }
