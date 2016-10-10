@@ -2,14 +2,14 @@ var ship;
 var Step = 0.01;
 var Score = 50;
 var Balls = [];
-var Active = true;
+var Active = false;
 
 var Ball = {
     x : 0,
     y : 0,
     score: 10,
     diameter: 10,
-    active: false,
+    active: true,
     
     draw: function draw(){
 	if (this.active){
