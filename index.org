@@ -1,0 +1,5 @@
+#+TITLE: Games
+
+* [[https://lebastr.github.io/engine_control/index.html][Spaceship engine control]]
+* [[http://lebastr.github.io/inverted_pendulum][Inverted pendulum]]
+  

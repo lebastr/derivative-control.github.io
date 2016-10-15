@@ -85,7 +85,6 @@ function setup() {
 	    line(width/2, height/2, width/2+this.ax, height/2+this.ay);
 	    text("Accel", width/2+this.ax, height/2+this.ay);
 
-
 	},
 
 	move: function(ax, ay) {
@@ -104,32 +103,31 @@ function draw() {
 
     stroke(0);
     line(0,height/2, width, height/2);
-    line(width/2,0, width/2, height);
+    line(width/2, 0, width/2, height);
 
     if(Active){
-	ship.draw();
+    	ship.draw();
 	
 	Balls.forEach(function(b) {b.draw();});
+
+    	fill(150);
+    	text("Score: " + Score, 10,20);
 	
-	fill(150);
-	text("Score: " + Score, 10,20);
-	
-	checkCollision();
-	ship.move(touchX - width/2, touchY - height/2);
+    	checkCollision();
+    	ship.move(touchX - width/2, touchY - height/2);
     } else {
-	Balls.forEach(function(b) {b.draw();});
+    	Balls.forEach(function(b) {b.draw();});
 
-	fill(200,0,0);
-	ellipse(width/2, height/2, 5, 5);
-	fill(200);
-	text("To start game click to the center of the crossline", width/2, height/2);
+    	fill(200,0,0);
+    	ellipse(width/2, height/2, 5, 5);
+    	fill(200);
+    	text("To start the game click to the center of the crossline", width/2, height/2);
 	
-	
-	fill(150);
-	text("Score: " + Score, 10,20);
+    	fill(150);
+    	text("Score: " + Score, 10,20);
 
-	if (mouseIsPressed || touchIsDown) {
-	    Active = true;
-	}
+    	if (mouseIsPressed || touchIsDown) {
+    	    Active = true;
+    	}
     }
 }
