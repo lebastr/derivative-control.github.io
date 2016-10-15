@@ -10,7 +10,7 @@ function PoleBalancer(car_mass, pole_mass, pole_length){
     this.pole_length = pole_length;
 
     this.x_coord = 0;
-    this.angle = 0;
+    this.angle = 0.01;
     this.x_velocity = 0;
     this.angle_velocity = 0;
     this.engine_force = 0;
@@ -66,7 +66,7 @@ function PoleBalancer(car_mass, pole_mass, pole_length){
 
 function setup() {
     createCanvas(1024, 768);
-    pole_balancer = new PoleBalancer(5, 0.01, 15);
+    pole_balancer = new PoleBalancer(5, 2, 15);
     car_image = loadImage("car.png"); 
 }
 
